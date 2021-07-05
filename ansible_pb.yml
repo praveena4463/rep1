@@ -1,11 +1,12 @@
-- name: install nginx
-  hosts: all
+---
+- hosts: all
   tasks:
-  - name: nginx software
-     apt: nginx
-     state: present
-  - name: start nginx
-    service: 
-     name: nginx
-     state: started
+    - name: ensure nginx is at the latest version
+      apt:
+       name: nginx
+       state: latest
+    - name: start nginx
+      service:
+          name: nginx
+          state: started
   
