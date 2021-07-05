@@ -4,7 +4,8 @@
       become: yes
       apt:
        name: nginx
-       state: latest
+       state: present
+       update_cache: yes
     - name: start nginx
       become: yes
       service:
