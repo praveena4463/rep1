@@ -4,6 +4,6 @@ ami = "ami-09e67e426f25ce0d7"
 instance_type = "micro"
 key_name = "terraform"
 tags = {
-Name = "join(",", ["i1","i2","i3"])"
+Name = "Instance-${count.index + 1}"
 }
 }
